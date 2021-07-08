@@ -21,6 +21,7 @@ public class ResourceMapper {
             resource.setStatus(updateResource.getStatus());
             resource.setName(updateResource.getName());
             resource.setDate(updateResource.getDate());
+            resource.setDate(updateResource.getDate());
             return resource;
         };
     }

@@ -6,13 +6,13 @@ import java.util.Objects;
 public class ResourceAnswerDTO {
 
     private String answer;
-    private Boolean status;
-    private LocalDate date;
+    private boolean status;
+    private String date;
 
     public ResourceAnswerDTO(){
     }
 
-    public ResourceAnswerDTO(String answer, Boolean status, LocalDate date){
+    public ResourceAnswerDTO(String answer, boolean status, String date){
         this.answer = answer;
         this.status = status;
         this.date = date;
@@ -24,11 +24,11 @@ public class ResourceAnswerDTO {
         return answer;
     }
 
-    public Boolean getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -38,11 +38,11 @@ public class ResourceAnswerDTO {
         this.answer = answer;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

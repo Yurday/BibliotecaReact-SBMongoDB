@@ -12,9 +12,9 @@ public class Resource {
     private String id;
     private String areaThemeId;
     private String resourceType;
-    private Boolean Status;
+    private boolean status;
     private String name;
-    private LocalDate date;
+    private String date;
 
     //Getter
 
@@ -30,18 +30,17 @@ public class Resource {
         return resourceType;
     }
 
-    public Boolean getStatus() {
-        return Status;
+    public boolean getStatus() {
+        return status;
     }
 
     public String getName() {
         return name;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
-
 
     //Setter
 
@@ -58,15 +57,15 @@ public class Resource {
         this.resourceType = resourceType;
     }
 
-    public void setStatus(Boolean status) {
-        Status = status;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }

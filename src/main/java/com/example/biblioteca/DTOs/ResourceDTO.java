@@ -10,7 +10,7 @@ public class ResourceDTO {
     private String areaThemeId;
     private boolean status;
     private String name;
-    private LocalDate date;
+    private String date;
 
     //Builder
 
@@ -18,7 +18,7 @@ public class ResourceDTO {
     public ResourceDTO() {
     }
 
-    public ResourceDTO(String id, String resourceType, String areaThemeId, boolean status, String name, LocalDate date) {
+    public ResourceDTO(String id, String resourceType, String areaThemeId, boolean status, String name, String date) {
         this.id = id;
         this.resourceType = resourceType;
         this.areaThemeId = areaThemeId;
@@ -27,7 +27,7 @@ public class ResourceDTO {
         this.date = date;
     }
 
-    public ResourceDTO(String resourceType, String areaThemeId, boolean status, String name, LocalDate date) {
+    public ResourceDTO(String resourceType, String areaThemeId, boolean status, String name, String date) {
         this.resourceType = resourceType;
         this.areaThemeId = areaThemeId;
         this.status = status;
@@ -57,10 +57,9 @@ public class ResourceDTO {
         return name;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
-
 
     //Setter
 
@@ -84,7 +83,7 @@ public class ResourceDTO {
         this.name = name;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

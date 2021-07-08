@@ -19,7 +19,7 @@ public class ConsultListResource {
 
     @Bean
     public RouterFunction<ServerResponse> getAllResources(UseCaseListResources useCaseListResource){
-        return route(GET("/biblioteca/recurso/consultar").and(accept(MediaType.APPLICATION_JSON)),
+        return route(GET("/biblioteca/resource/consult").and(accept(MediaType.APPLICATION_JSON)),
                 request -> ServerResponse.ok()
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters.fromPublisher(useCaseListResource.get(), ResourceDTO.class))

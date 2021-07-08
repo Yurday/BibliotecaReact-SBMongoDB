@@ -6,44 +6,21 @@ import com.example.biblioteca.collections.ResourceAreaTheme;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Function;
 
 public class ResourceAreaThemeMapper {
 
-    //DTO to ResourceAreaTheme
+    public Function<ResourceAreaThemeDTO, ResourceAreaTheme> mapperToAreaTheme(String id){
+        return updateAreaTheme ->{
+            var areaTheme = new ResourceAreaTheme();
+            areaTheme.setId(id);
+            areaTheme.setName(updateAreaTheme.getName());
 
-    public ResourceAreaTheme fromDTO(ResourceAreaThemeDTO resourceAreaThemeDTO){
-        ResourceAreaTheme areaTheme = new ResourceAreaTheme();
-        areaTheme.setId(resourceAreaThemeDTO.getId());
-        areaTheme.setName(resourceAreaThemeDTO.getName());
-
-        return areaTheme;
+            return areaTheme;
+        };
     }
 
-    //Collection to ResourceAreaThemeDTO
-
-    public ResourceAreaThemeDTO fromCollection(ResourceAreaTheme collection){
-        ResourceAreaThemeDTO areaThemeDTO = new ResourceAreaThemeDTO();
-        areaThemeDTO.setId(collection.getId());
-        areaThemeDTO.setName(collection.getName());
-
-        return areaThemeDTO;
+    public Function<ResourceAreaTheme, ResourceAreaThemeDTO> mappAreaThemeToDTO(){
+        return entity ->new ResourceAreaThemeDTO(entity.getId(),entity.getName());
     }
-
-    //Collection list to DTO list
-    public List<ResourceAreaThemeDTO> fromCollectionList(List<ResourceAreaTheme> collection){
-        if (collection == null){
-            return null;
-        }
-
-        List<ResourceAreaThemeDTO> list = new ArrayList(collection.size());
-        Iterator listTracks = collection.iterator();
-
-        while (listTracks.hasNext()){
-            ResourceAreaTheme areaTheme = (ResourceAreaTheme) listTracks.next();
-            list.add(fromCollection(areaTheme));
-        }
-
-        return list;
-    }
-
 }

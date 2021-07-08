@@ -1,6 +1,7 @@
 package com.example.biblioteca.DTOs;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class ResourceAnswerDTO {
 
@@ -43,5 +44,18 @@ public class ResourceAnswerDTO {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ResourceAnswerDTO that = (ResourceAnswerDTO) o;
+        return status == that.status && Objects.equals(answer, that.answer) && Objects.equals(date, that.date);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(answer, status, date);
     }
 }

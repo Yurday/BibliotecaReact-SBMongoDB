@@ -27,6 +27,13 @@ public class ResourceDTO {
         this.date = date;
     }
 
+    public ResourceDTO(String resourceType, String areaThemeId, boolean status, String name, LocalDate date) {
+        this.resourceType = resourceType;
+        this.areaThemeId = areaThemeId;
+        this.status = status;
+        this.name = name;
+        this.date = date;
+    }
 
     //Getter
 

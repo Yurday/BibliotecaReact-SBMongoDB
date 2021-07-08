@@ -4,6 +4,6 @@ import com.example.biblioteca.DTOs.ResourceDTO;
 import reactor.core.publisher.Mono;
 
 @FunctionalInterface
-public interface SaveResource {
+public interface UpdateResource {
     public Mono<ResourceDTO> apply(ResourceDTO resourceDTO);
 }

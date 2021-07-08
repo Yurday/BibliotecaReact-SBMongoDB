@@ -14,6 +14,10 @@ public class ResourceDTO {
 
     //Builder
 
+
+    public ResourceDTO() {
+    }
+
     public ResourceDTO(String id, String resourceType, String areaThemeId, boolean status, String name, LocalDate date) {
         this.id = id;
         this.resourceType = resourceType;

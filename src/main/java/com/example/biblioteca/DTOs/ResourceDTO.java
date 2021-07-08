@@ -6,8 +6,8 @@ import java.util.Objects;
 public class ResourceDTO {
 
     private String id;
-    private String resourceType;
     private String areaThemeId;
+    private String resourceType;
     private boolean status;
     private String name;
     private String date;
@@ -18,18 +18,18 @@ public class ResourceDTO {
     public ResourceDTO() {
     }
 
-    public ResourceDTO(String id, String resourceType, String areaThemeId, boolean status, String name, String date) {
+    public ResourceDTO(String id, String areaThemeId, String resourceType, boolean status, String name, String date) {
         this.id = id;
-        this.resourceType = resourceType;
         this.areaThemeId = areaThemeId;
+        this.resourceType = resourceType;
         this.status = status;
         this.name = name;
         this.date = date;
     }
 
-    public ResourceDTO(String resourceType, String areaThemeId, boolean status, String name, String date) {
-        this.resourceType = resourceType;
+    public ResourceDTO(String areaThemeId, String resourceType, boolean status, String name, String date) {
         this.areaThemeId = areaThemeId;
+        this.resourceType = resourceType;
         this.status = status;
         this.name = name;
         this.date = date;

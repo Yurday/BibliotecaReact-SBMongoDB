@@ -2,12 +2,14 @@ package com.example.biblioteca.mappers;
 
 import com.example.biblioteca.DTOs.ResourceAreaThemeDTO;
 import com.example.biblioteca.collections.ResourceAreaTheme;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
 
+@Component
 public class ResourceAreaThemeMapper {
 
     public Function<ResourceAreaThemeDTO, ResourceAreaTheme> mapperToAreaTheme(String id){

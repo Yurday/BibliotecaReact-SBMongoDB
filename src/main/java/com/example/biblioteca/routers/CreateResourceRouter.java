@@ -18,7 +18,7 @@ public class CreateResourceRouter {
 
     @Bean
     public RouterFunction<ServerResponse> createResource(UseCaseCreateResource useCaseCreateResource){
-        return route(POST("biblioteca/resource/create").and(accept(MediaType.APPLICATION_JSON)),
+        return route(POST("/biblioteca/resource/create").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(ResourceDTO.class)
                         .flatMap(resourceDTO -> useCaseCreateResource.apply(resourceDTO)
                                 .flatMap(result -> ServerResponse.ok()

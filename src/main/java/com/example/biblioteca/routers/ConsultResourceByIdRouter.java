@@ -18,7 +18,7 @@ public class ConsultResourceByIdRouter {
 
     @Bean
     public RouterFunction<ServerResponse> consultResourceById(UseCaseConsultResourceById useCaseConsultResourceById){
-        return route(GET("biblioteca/resource/consult/{id}").and(accept(MediaType.APPLICATION_JSON)),
+        return route(GET("/biblioteca/resource/consult/{id}").and(accept(MediaType.APPLICATION_JSON)),
                 request -> ServerResponse.ok()
                 .body(useCaseConsultResourceById.findById(request.pathVariable("id")),ResourceDTO.class));
     }

@@ -15,7 +15,6 @@ public class UseCaseRecommendResourceType implements Function<String, Flux<Resou
     private final ResourceMapper resourceMapper;
 
     @Autowired
-
     public UseCaseRecommendResourceType(ResourceRepository resourceRepository, ResourceMapper resourceMapper) {
         this.resourceRepository = resourceRepository;
         this.resourceMapper = resourceMapper;

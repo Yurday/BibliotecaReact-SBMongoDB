@@ -15,7 +15,6 @@ public class UseCaseListAreasTheme implements Supplier<Flux<ResourceAreaThemeDTO
     private final ResourceAreaThemeMapper resourceAreaThemeMapper;
 
     @Autowired
-
     public UseCaseListAreasTheme(ResourceAreaThemeRepository resourceAreaThemeRepository, ResourceAreaThemeMapper resourceAreaThemeMapper) {
         this.resourceAreaThemeRepository = resourceAreaThemeRepository;
         this.resourceAreaThemeMapper = resourceAreaThemeMapper;

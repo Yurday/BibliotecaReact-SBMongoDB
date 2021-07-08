@@ -15,7 +15,6 @@ public class UseCaseDeleteAreaTheme implements DeleteAreaTheme {
     private final ResourceAreaThemeMapper resourceAreaThemeMapper;
 
     @Autowired
-
     public UseCaseDeleteAreaTheme(ResourceAreaThemeRepository resourceAreaThemeRepository, ResourceAreaThemeMapper resourceAreaThemeMapper) {
         this.resourceAreaThemeRepository = resourceAreaThemeRepository;
         this.resourceAreaThemeMapper = resourceAreaThemeMapper;

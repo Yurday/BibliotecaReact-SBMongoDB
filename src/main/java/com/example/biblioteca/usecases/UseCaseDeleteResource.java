@@ -13,13 +13,11 @@ public class UseCaseDeleteResource implements DeleteResource {
     private final ResourceRepository resourceRepository;
     private final ResourceMapper resourceMapper;
 
+    @Autowired
     public UseCaseDeleteResource(ResourceRepository resourceRepository, ResourceMapper resourceMapper) {
         this.resourceRepository = resourceRepository;
         this.resourceMapper = resourceMapper;
     }
-
-    @Autowired
-
 
     @Override
     public Mono<Void> deleteFindById(String id) {

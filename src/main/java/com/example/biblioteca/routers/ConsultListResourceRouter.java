@@ -15,7 +15,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 @Configuration
-public class ConsultListResource {
+public class ConsultListResourceRouter {
 
     @Bean
     public RouterFunction<ServerResponse> getAllResources(UseCaseListResources useCaseListResource){
